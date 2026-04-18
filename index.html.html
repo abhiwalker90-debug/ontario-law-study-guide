@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ontario Auto Insurance — Complete Exam Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy:#1B2A4A; --gold:#C9A84C; --gold-light:#EFE0B0; --gold-muted:#8A6E2E;
+    --red:#A0261A; --red-light:#FFF0F0; --blue:#1A4F72; --blue-light:#E8F0F8;
+    --green:#1E5C3A; --green-light:#E8F5EE; --purple:#4A1A7D; --purple-light:#F4EFF8;
+    --teal:#0D5E6E; --teal-light:#E0F4F8; --orange:#8B4000; --orange-light:#FEF5EE;
+    --off-white:#F4F1EC; --dark:#2C2C2C; --mid:#555; --white:#fff;
+    --shadow:0 4px 18px rgba(0,0,0,0.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Source Sans 3',sans-serif;background:var(--off-white);color:var(--dark);min-height:100vh;}
+
+  /* NAV */
+  .top-bar{background:var(--navy);position:sticky;top:0;z-index:100;border-bottom:3px solid var(--gold);}
+  .top-bar-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none;}
+  .top-bar-inner::-webkit-scrollbar{display:none;}
+  .site-title{color:var(--gold);font-family:'Playfair Display',serif;font-size:13px;white-space:nowrap;margin-right:10px;padding:14px 0;border-right:1px solid rgba(201,168,76,0.3);padding-right:14px;}
+  .nav-btn{background:none;border:none;color:rgba(201,168,76,0.65);cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.5px;padding:14px 10px;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+  .nav-btn:hover{color:var(--gold);}
+  .nav-btn.active{color:var(--gold);border-bottom-color:var(--gold);}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,var(--navy) 60%,#0f1e35);color:var(--white);padding:52px 24px 44px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+  .hero-inner{max-width:1100px;margin:0 auto;position:relative;}
+  .hero-tag{font-size:11px;letter-spacing:5px;color:var(--gold);font-weight:700;margin-bottom:14px;text-transform:uppercase;}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,44px);font-weight:900;line-height:1.1;margin-bottom:14px;}
+  .hero h1 span{color:var(--gold);}
+  .hero-sub{color:var(--gold-light);font-size:14px;font-style:italic;max-width:680px;}
+  .hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .pill{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.35);color:var(--gold-light);font-size:11px;font-weight:600;letter-spacing:1px;padding:4px 12px;border-radius:20px;}
+
+  /* MAIN */
+  .main{max-width:1100px;margin:0 auto;padding:32px 20px 80px;}
+  .tab-panel{display:none;animation:fadeIn .3s ease;}
+  .tab-panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+  /* SECTION HEADERS */
+  .section-block{margin-bottom:28px;}
+  .section-hdr{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .section-hdr-bar{width:5px;border-radius:3px;height:32px;flex-shrink:0;}
+  .section-hdr h2{font-family:'Playfair Display',serif;font-size:20px;color:var(--navy);}
+  .section-hdr .section-sub{font-size:13px;color:var(--mid);font-style:italic;margin-top:2px;}
+
+  /* CARDS GRID */
+  .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+  .card{background:var(--white);border-radius:10px;padding:20px;box-shadow:var(--shadow);border-left:4px solid var(--gold);}
+  .card-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;margin-bottom:10px;}
+  .card ul{padding-left:18px;}
+  .card ul li{font-size:13px;line-height:1.75;color:var(--dark);}
+  .card ul li::marker{color:var(--gold);}
+
+  /* ALERT BOXES */
+  .alert{border-radius:8px;padding:14px 18px;margin:12px 0;font-size:13px;line-height:1.7;display:flex;gap:12px;align-items:flex-start;}
+  .alert-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
+  .alert.red{background:var(--red-light);border:1px solid rgba(160,38,26,0.35);}
+  .alert.red .alert-text strong{color:var(--red);}
+  .alert.gold{background:#FFF8E1;border:1px solid rgba(201,168,76,0.5);}
+  .alert.gold .alert-text strong{color:#6B4B00;}
+  .alert.green{background:var(--green-light);border:1px solid rgba(30,92,58,0.35);}
+  .alert.green .alert-text strong{color:var(--green);}
+  .alert.blue{background:var(--blue-light);border:1px solid rgba(26,79,114,0.35);}
+  .alert.blue .alert-text strong{color:var(--blue);}
+
+  /* PRIORITY STEPS */
+  .steps{display:flex;flex-direction:column;gap:6px;}
+  .step{display:flex;align-items:center;gap:14px;border-radius:6px;padding:10px 16px;font-size:13px;font-weight:600;}
+  .step-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
+
+  /* TWO COL */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr;}}
+
+  /* ── FLASHCARDS ── */
+  .fc-controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center;}
+  .fc-btn{padding:9px 20px;border-radius:6px;border:2px solid var(--gold);background:transparent;color:var(--gold);font-weight:700;font-size:13px;cursor:pointer;font-family:'Source Sans 3',sans-serif;transition:all .2s;}
+  .fc-btn.active, .fc-btn:hover{background:var(--gold);color:var(--navy);}
+  .fc-meta{font-size:12px;color:var(--mid);margin-left:auto;}
+
+  .fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;}
+  .fc-card{background:var(--white);border-radius:12px;border:2px solid rgba(201,168,76,0.25);padding:22px;cursor:pointer;transition:all .25s;box-shadow:var(--shadow);min-height:140px;display:flex;flex-direction:column;}
+  .fc-card:hover{border-color:var(--gold);transform:translateY(-2px);}
+  .fc-card.flipped{background:linear-gradient(135deg,var(--navy),#0f1e35);border-color:var(--gold);}
+  .fc-label{font-size:10px;letter-spacing:3px;font-weight:700;margin-bottom:12px;}
+  .fc-card:not(.flipped) .fc-label{color:var(--gold-muted);}
+  .fc-card.flipped .fc-label{color:var(--gold);}
+  .fc-text{font-size:13px;line-height:1.75;flex:1;}
+  .fc-card:not(.flipped) .fc-text{color:var(--dark);}
+  .fc-card.flipped .fc-text{color:var(--white);}
+  .fc-hint{font-size:10px;margin-top:12px;}
+  .fc-card:not(.flipped) .fc-hint{color:#ccc;}
+  .fc-card.flipped .fc-hint{color:rgba(201,168,76,0.5);}
+
+  /* Study mode */
+  .study-wrap{max-width:680px;margin:0 auto;}
+  .study-card{background:var(--white);border-radius:16px;border:2px solid var(--gold);padding:48px 40px;cursor:pointer;min-height:240px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:var(--shadow);transition:background .4s;position:relative;}
+  .study-card.flipped{background:linear-gradient(135deg,var(--navy),#0f1e35);}
+  .study-label{font-size:10px;letter-spacing:5px;font-weight:700;margin-bottom:20px;}
+  .study-card:not(.flipped) .study-label{color:var(--gold-muted);}
+  .study-card.flipped .study-label{color:var(--gold);}
+  .study-text{font-size:17px;line-height:1.7;}
+  .study-card:not(.flipped) .study-text{color:var(--dark);}
+  .study-card.flipped .study-text{color:var(--white);}
+  .study-nav{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:20px;}
+  .snav-btn{padding:10px 28px;border-radius:6px;border:2px solid var(--gold);background:transparent;color:var(--gold);font-weight:700;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:14px;transition:all .2s;}
+  .snav-btn:hover:not(:disabled){background:var(--gold);color:var(--navy);}
+  .snav-btn:disabled{border-color:#ccc;color:#ccc;cursor:not-allowed;}
+  .study-progress{font-size:13px;color:var(--mid);}
+
+  /* ── BRIEF ── */
+  .brief-section{margin-bottom:24px;}
+  .brief-hdr{font-size:10px;letter-spacing:4px;font-weight:700;color:var(--gold);border-bottom:1px solid rgba(201,168,76,0.3);padding-bottom:6px;margin-bottom:12px;}
+  .brief-grid{display:grid;grid-template-columns:200px 1fr;gap:6px 16px;}
+  .brief-key{font-weight:700;font-size:13px;color:var(--navy);}
+  .brief-val{font-size:13px;color:var(--dark);line-height:1.65;}
+  @media(max-width:560px){.brief-grid{grid-template-columns:1fr;}}
+
+  /* ── EXAM GUIDE ── */
+  .exam-tip{display:flex;gap:14px;background:var(--white);border-radius:8px;padding:14px 18px;margin-bottom:10px;box-shadow:var(--shadow);border-left:4px solid;}
+  .exam-tag{font-size:9px;letter-spacing:2px;font-weight:700;border:1px solid;border-radius:4px;padding:3px 8px;white-space:nowrap;flex-shrink:0;margin-top:2px;height:fit-content;}
+  .exam-text{font-size:13px;line-height:1.7;color:var(--dark);}
+  .formula-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .formula-table th{background:var(--navy);color:var(--gold);text-align:left;padding:10px 14px;font-size:11px;letter-spacing:1px;}
+  .formula-table td{padding:10px 14px;border-bottom:1px solid #e8e4dc;vertical-align:top;}
+  .formula-table tr:nth-child(even) td{background:rgba(27,42,74,0.04);}
+  .formula-table td:first-child{font-weight:700;color:var(--navy);white-space:nowrap;width:210px;}
+
+  /* CASE LAW BLOCK */
+  .case-block{background:var(--white);border-radius:10px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:16px;}
+  .case-hdr{padding:14px 20px;display:flex;align-items:center;gap:14px;}
+  .case-hdr-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;opacity:.4;}
+  .case-hdr-text .case-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;}
+  .case-hdr-text .case-sub{font-size:12px;opacity:.85;margin-top:2px;}
+  .case-body{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+  .case-col{padding:18px 20px;}
+  .case-col:first-child{border-right:1px solid #eee;}
+  .case-col-title{font-size:10px;letter-spacing:3px;font-weight:700;margin-bottom:10px;}
+  .case-col ul{padding-left:16px;}
+  .case-col ul li{font-size:13px;line-height:1.75;margin-bottom:2px;}
+  .case-col ul li::marker{color:var(--gold);}
+  .case-verdict{padding:12px 20px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;}
+  @media(max-width:600px){.case-body{grid-template-columns:1fr;}.case-col:first-child{border-right:none;border-bottom:1px solid #eee;}}
+
+  /* UDAP */
+  .udap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-bottom:16px;}
+  .udap-card{border-radius:8px;padding:18px;border-left:4px solid var(--purple);}
+
+  /* SCROLL TOP */
+  #scrollTop{position:fixed;bottom:24px;right:24px;background:var(--gold);color:var(--navy);border:none;border-radius:50%;width:44px;height:44px;font-size:20px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.2);display:none;align-items:center;justify-content:center;z-index:200;transition:transform .2s;}
+  #scrollTop:hover{transform:scale(1.1);}
+  #scrollTop.show{display:flex;}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="site-title">Ontario Law</div>
+    <button class="nav-btn active" onclick="showTab('summary')">📖 Summary</button>
+    <button class="nav-btn" onclick="showTab('flashcards')">🃏 Flashcards</button>
+    <button class="nav-btn" onclick="showTab('caselaw')">⚖️ Case Law</button>
+    <button class="nav-btn" onclick="showTab('brief')">📝 Law Brief</button>
+    <button class="nav-btn" onclick="showTab('exam')">🎯 Exam Guide</button>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Complete Exam Study Guide — Parts 1, 2 & 3</div>
+    <h1>Automobile Insurance in Ontario<br/><span>&amp; Consumer Protection (UDAP)</span></h1>
+    <div class="hero-sub">OAP 1 · SABs · MIG · DCPD · Third Party Liability · s.267.5 · Amos · Witlingham · Herbison · UDAP</div>
+    <div class="hero-pills">
+      <span class="pill">Insurance Act</span><span class="pill">OAP 1</span><span class="pill">O. Reg 34/10</span>
+      <span class="pill">s.267.5</span><span class="pill">s.239</span><span class="pill">FSRA Rule 2021-001</span>
+      <span class="pill">3 SCC Cases</span>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ═══════════════════ SUMMARY TAB ═══════════════════ -->
+<div id="tab-summary" class="tab-panel active">
+
+  <!-- 1. Hybrid System -->
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--navy)"></div><div><h2>01 — Ontario's Hybrid Auto Insurance System</h2><div class="section-sub">The foundation — understand this before anything else</div></div></div>
+    <div class="two-col">
+      <div class="card" style="border-left-color:var(--blue);">
+        <div class="card-title" style="color:var(--blue);">🔵 No-Fault Side</div>
+        <ul>
+          <li>Statutory Accident Benefits (SABs)</li>
+          <li>Claim from <strong>YOUR OWN insurer first</strong></li>
+          <li>Fault is <strong>completely irrelevant</strong></li>
+          <li>Designed for speed and certainty</li>
+          <li>Every injured person is compensated</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left-color:var(--red);">
+        <div class="card-title" style="color:var(--red);">🔴 Tort Side</div>
+        <ul>
+          <li>Third Party Liability claims</li>
+          <li><strong>Fault must be established</strong></li>
+          <li>Sue for economic + pain &amp; suffering damages</li>
+          <li>Contributory negligence applies</li>
+          <li>Governed by s.267.5 threshold</li>
+        </ul>
+      </div>
+    </div>
+    <div class="alert gold"><span class="alert-icon">📌</span><div class="alert-text"><strong>Key framing:</strong> Ontario leans toward no-fault (more than most provinces, less than Quebec). All mandatory coverages are set by legislation — insurers cannot change the basic package under OAP 1.</div></div>
+  </div>
+
+  <!-- 2. SABs -->
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--blue)"></div><div><h2>02 — Statutory Accident Benefits (SABs)</h2><div class="section-sub">No-fault benefits — respond first, regardless of who caused the accident</div></div></div>
+    <div class="cards-grid">
+      <div class="card" style="border-left-color:var(--blue);">
+        <div class="card-title" style="color:var(--blue);">Eligibility Trigger</div>
+        <ul>
+          <li>Injury from <strong>use or operation</strong> of a motor vehicle</li>
+          <li>Covers: driver · passenger · pedestrian · cyclist</li>
+          <li>Claim from <strong>own insurer first</strong> — fault irrelevant</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left-color:var(--blue);">
+        <div class="card-title" style="color:var(--blue);">Priority Rules — Who Pays?</div>
+        <div class="steps">
+          <div class="step" style="background:#1A4F72;color:#fff;"><div class="step-num" style="background:var(--gold);color:var(--navy);">1</div>Your own insurer</div>
+          <div class="step" style="background:#2B6A9A;color:#fff;"><div class="step-num" style="background:rgba(255,255,255,0.3);color:#fff;">2</div>Spouse's insurer</div>
+          <div class="step" style="background:#3A7ABE;color:#fff;"><div class="step-num" style="background:rgba(255,255,255,0.3);color:#fff;">3</div>Insurer of vehicle you were in</div>
+          <div class="step" style="background:#999;color:#fff;"><div class="step-num" style="background:rgba(255,255,255,0.3);color:#fff;">4</div>MVACF (last resort)</div>
+        </div>
+      </div>
+      <div class="card" style="border-left-color:var(--blue);">
+        <div class="card-title" style="color:var(--blue);">SAB Benefit Types</div>
+        <ul>
+          <li>Medical / Rehab / Attendant Care</li>
+          <li>IRBs — 70% of gross income, weekly caps</li>
+          <li>Non-Earner Benefits (students/unemployed)</li>
+          <li>Caregiver Benefits</li>
+          <li>Death &amp; Funeral Benefits</li>
+          <li>Optional: housekeeping, educational expenses</li>
+        </ul>
+      </div>
+    </div>
+    <div class="alert red"><span class="alert-icon">⚠️</span><div class="alert-text"><strong>Repeat emphasis from lecture (said 3 times):</strong> Fault does NOT matter for SABs. You receive benefits even if you caused the accident. This is the defining feature of no-fault benefits.</div></div>
+  </div>
+
+  <!-- 3. MIG -->
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--red)"></div><div><h2>03 — Minor Injury Guideline (MIG)</h2><div class="section-sub">O. Reg 34/10, s.3(1) — caps SAB treatment for soft tissue injuries</div></div></div>
+    <div class="cards-grid">
+      <div class="card" style="border-left-color:var(--red);">
+        <div class="card-title" style="color:var(--red);">Injuries Within MIG</div>
+        <ul>
+          <li>Sprains · Strains · Whiplash</li>
+          <li>Contusions · Abrasions · Lacerations</li>
+          <li>Sub-luxations</li>
+          <li>Full recovery typically expected</li>
+          <li>Strict cap on treatment funding</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left-color:var(--green);">
+        <div class="card-title" style="color:var(--green);">3 Ways to EXIT the MIG</div>
+        <div class="steps">
+          <div class="step" style="background:var(--green-light);color:var(--green);border:1px solid var(--green);"><div class="step-num" style="background:var(--green);color:#fff;">1</div>Permanent spinal impairment</div>
+          <div class="step" style="background:var(--green-light);color:var(--green);border:1px solid var(--green);"><div class="step-num" style="background:var(--green);color:#fff;">2</div>Significant loss of limb function</div>
+          <div class="step" style="background:var(--green-light);color:var(--green);border:1px solid var(--green);"><div class="step-num" style="background:var(--green);color:#fff;">3</div>Chronic disabling pain</div>
+        </div>
+      </div>
+      <div class="card" style="border-left-color:var(--gold);">
+        <div class="card-title" style="color:var(--gold-muted);">What Exiting MIG Unlocks</div>
+        <ul>
+          <li>Higher SAB limits (non-catastrophic → higher caps)</li>
+          <li>Catastrophic = very high limits + lifetime care</li>
+          <li>Access to non-economic tort damages (pain &amp; suffering)</li>
+          <li>MIG classification can change as injury evolves</li>
+        </ul>
+      </div>
+    </div>
+    <div class="alert red"><span class="alert-icon">🚨</span><div class="alert-text"><strong>Most common student error:</strong> MIG ONLY governs SAB (no-fault) benefit entitlement. It does NOT apply to tort-based claims. MIG ≠ s.267.5. They are similar concepts but legally distinct.</div></div>
+  </div>
+
+  <!-- 4. DCPD + Uninsured -->
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--green)"></div><div><h2>04 — DCPD &amp; Uninsured Automobile Coverage</h2><div class="section-sub">Two more mandatory buckets under OAP 1</div></div></div>
+    <div class="two-col">
+      <div>
+        <div class="card" style="border-left-color:var(--green);">
+          <div class="card-title" style="color:var(--green);">DCPD — Direct Compensation Property Damage</div>
+          <p style="font-size:13px;margin-bottom:10px;color:var(--mid);">Your insurer pays your vehicle damage when you're NOT at fault. All 4 must apply:</p>
+          <ul>
+            <li>Accident occurred <strong>in Ontario</strong></li>
+            <li>At least <strong>one other vehicle</strong> involved</li>
+            <li>Other vehicle insured by <strong>licensed Ontario insurer</strong></li>
+            <li>You are <strong>not at fault</strong> under Fault Determination Rules</li>
+            <li>Your insurer then <strong>subrogate</strong> against the at-fault party</li>
+            <li>As of <strong>Jan 1, 2024</strong> — drivers may opt out by signing a form</li>
+            <li>At-fault drivers: no DCPD — need optional collision cover</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left-color:var(--teal);">
+          <div class="card-title" style="color:var(--teal);">Uninsured Automobile Coverage (4th Mandatory Bucket)</div>
+          <ul>
+            <li>Covers injury when at-fault driver has <strong>no insurance</strong></li>
+            <li>Covers <strong>hit-and-run</strong> situations (unidentified driver)</li>
+            <li>Your own insurer steps in to provide coverage</li>
+          </ul>
+          <div style="margin-top:12px;padding-top:12px;border-top:1px solid #eee;">
+            <div style="font-size:12px;font-weight:700;color:var(--teal);margin-bottom:6px;">Optional Add-Ons (not mandatory)</div>
+            <ul>
+              <li>Enhanced accident benefits (higher limits)</li>
+              <li>Collision &amp; Comprehensive (own vehicle, at-fault)</li>
+              <li>Specified perils / additional uninsured protections</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert gold"><span class="alert-icon">⭐</span><div class="alert-text"><strong>EXAM FLAG:</strong> Even with optional coverages — no-fault SABs are statutory and always apply first from your own insurer. Optional coverage supplements but never replaces the mandatory no-fault layer.</div></div>
+  </div>
+
+  <!-- 5. TPL + s.267.5 -->
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--purple)"></div><div><h2>05 — Third Party Liability &amp; s.267.5 Threshold</h2><div class="section-sub">Fault-based tort claims — the gate for pain &amp; suffering</div></div></div>
+    <div class="cards-grid">
+      <div class="card" style="border-left-color:var(--purple);">
+        <div class="card-title" style="color:var(--purple);">Third Party Liability</div>
+        <ul>
+          <li>Minimum $200K required (standard: $1M+)</li>
+          <li><strong>Fault must be proven</strong></li>
+          <li>Economic damages: always available beyond SAB caps</li>
+          <li>Contributory negligence reduces damages proportionally</li>
+          <li>Pain &amp; suffering: only if s.267.5 threshold met</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left-color:var(--red);">
+        <div class="card-title" style="color:var(--red);">s.267.5 — Pain &amp; Suffering Gate</div>
+        <p style="font-size:12px;color:var(--mid);margin-bottom:8px;">Must prove ONE of:</p>
+        <div class="steps">
+          <div class="step" style="background:var(--red-light);border:1px solid var(--red);color:var(--red);"><div class="step-num" style="background:var(--red);color:#fff;">1</div>Death</div>
+          <div class="step" style="background:var(--red-light);border:1px solid var(--red);color:var(--red);"><div class="step-num" style="background:var(--red);color:#fff;">2</div>Permanent serious disfigurement</div>
+          <div class="step" style="background:var(--red-light);border:1px solid var(--red);color:var(--red);"><div class="step-num" style="background:var(--red);color:#fff;">3</div>Permanent serious impairment of an important function</div>
+        </div>
+        <p style="font-size:12px;margin-top:10px;color:var(--mid);">"Important function" = walking · cognition · limb use · psychological function</p>
+      </div>
+      <div class="card" style="border-left-color:var(--navy);">
+        <div class="card-title" style="color:var(--navy);">Statutory Deductible</div>
+        <div style="font-size:28px;font-family:'Playfair Display',serif;color:var(--gold);font-weight:900;margin:8px 0;">$47,913.01</div>
+        <p style="font-size:13px;color:var(--mid);">Deducted from every pain &amp; suffering award — even if you WIN.</p>
+        <p style="font-size:13px;margin-top:6px;"><strong>$100,000 award</strong> → you receive <strong style="color:var(--green);">$52,086.99</strong></p>
+        <p style="font-size:12px;margin-top:8px;color:var(--mid);">Purpose: reduce small claims, control premiums, encourage settlements.</p>
+      </div>
+    </div>
+    <div class="two-col" style="margin-top:12px;">
+      <div class="card" style="border-left-color:var(--green);">
+        <div class="card-title" style="color:var(--green);">✓ CAN sue for pain &amp; suffering</div>
+        <ul>
+          <li>Permanent scarring / disfigurement</li>
+          <li>Permanent loss of limb function</li>
+          <li>Permanent cognitive impairment</li>
+          <li>Permanent psychological impairment</li>
+          <li>Death (estate/dependents)</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left-color:var(--red);">
+        <div class="card-title" style="color:var(--red);">✗ CANNOT sue for pain &amp; suffering</div>
+        <ul>
+          <li>Sprains/strains with full recovery</li>
+          <li>Whiplash with full recovery</li>
+          <li>Minor psychological distress</li>
+          <li>Short-term pain, no lasting impairment</li>
+          <li>Temporary soft tissue injury</li>
+        </ul>
+      </div>
+    </div>
+    <div class="alert blue"><span class="alert-icon">📋</span><div class="alert-text"><strong>Court standard:</strong> Impairment must be real and substantial, interfere meaningfully with normal life activities, and be supported by expert medical evidence. Subjective complaints alone are insufficient.</div></div>
+  </div>
+
+  <!-- 6. Coverage Trigger -->
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--teal)"></div><div><h2>06 — Coverage Trigger: "Arising from Use or Operation"</h2><div class="section-sub">The phrase that runs through all OAP 1 coverages — and the source of all the case law</div></div></div>
+    <div class="alert blue"><span class="alert-icon">📖</span><div class="alert-text"><strong>The trigger phrase:</strong> "Arising directly or indirectly from the ownership, use OR operation of an automobile" — appears across SABs, DCPD, and third party liability. Courts have wrestled with what this means in non-obvious cases.</div></div>
+    <div class="two-col" style="margin-top:12px;">
+      <div class="card" style="border-left-color:var(--green);">
+        <div class="card-title" style="color:var(--green);">Easy Cases (obvious coverage)</div>
+        <ul>
+          <li>Two cars collide</li>
+          <li>Vehicle strikes a pedestrian</li>
+          <li>Vehicle strikes a cyclist</li>
+          <li>Exiting a vehicle, struck by another car</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left-color:var(--red);">
+        <div class="card-title" style="color:var(--red);">Hard Cases (the real exam material)</div>
+        <ul>
+          <li>Carjacking — is the vehicle the cause? (<em>Amos</em>)</li>
+          <li>Boulder dropped from overpass (<em>Witlingham</em>)</li>
+          <li>Hunting accident after driving to site (<em>Herbison</em>)</li>
+          <li>Slip &amp; fall at gas station after parking</li>
+        </ul>
+      </div>
+    </div>
+    <div class="alert gold" style="margin-top:12px;"><span class="alert-icon">⚖️</span><div class="alert-text"><strong>Critical principle:</strong> The causation threshold is at its LOWEST for SABs (statutory accident benefits) and HIGHER for third party liability coverages. Same phrase — different standard depending on what type of coverage is in play.</div></div>
+  </div>
+
+  <!-- 7. UDAP -->
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--purple)"></div><div><h2>07 — UDAP: Unfair &amp; Deceptive Acts or Practices</h2><div class="section-sub">FSRA Rule 2021-001 — consumer protection in Ontario insurance (lower exam weight but included)</div></div></div>
+    <div class="two-col">
+      <div class="card" style="border-left-color:var(--purple);">
+        <div class="card-title" style="color:var(--purple);">DECEPTIVE (misleading information)</div>
+        <ul>
+          <li>Intent is irrelevant — inadvertent deception counts</li>
+          <li>Creates false or misleading impression</li>
+          <li>Misrepresents key product features</li>
+          <li>Omits material information</li>
+          <li>Technically true statements can still be deceptive</li>
+          <li>Test: would a reasonable consumer be misled?</li>
+          <li>Silence/omission can be deceptive</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left-color:var(--navy);">
+        <div class="card-title" style="color:var(--navy);">UNFAIR (inequitable outcomes)</div>
+        <ul>
+          <li>Broader than deception — focuses on outcomes</li>
+          <li>Causes consumer harm not reasonably justified</li>
+          <li>Exploits consumer vulnerability</li>
+          <li>Undermines informed decision-making</li>
+          <li>A practice can be fully disclosed yet still UNFAIR</li>
+          <li>No deception required — unfairness is about treatment</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cards-grid" style="margin-top:14px;">
+      <div class="card" style="border-left-color:var(--purple);"><div class="card-title" style="color:var(--purple);font-size:13px;">01 — Misleading Representations</div><ul><li>False statements, half-truths</li><li>Ambiguous/exaggerated claims</li><li>Marketing creating misleading overall impression</li><li>Total impression governs — not isolated wording</li></ul></div>
+      <div class="card" style="border-left-color:var(--purple);"><div class="card-title" style="color:var(--purple);font-size:13px;">02 — Material Omissions</div><ul><li>Failure to disclose key limitations</li><li>Withholding information for informed decisions</li><li>Structuring disclosures to obscure facts</li></ul></div>
+      <div class="card" style="border-left-color:var(--purple);"><div class="card-title" style="color:var(--purple);font-size:13px;">03 — Unfair Claims Practices</div><ul><li>Unreasonable delays in claims handling</li><li>Inadequate investigation</li><li>Poor or unclear communication</li><li>Outcomes not reflecting fair assessment</li></ul></div>
+      <div class="card" style="border-left-color:var(--purple);"><div class="card-title" style="color:var(--purple);font-size:13px;">04 — Unfair Sales &amp; Distribution</div><ul><li>High-pressure sales tactics</li><li>Exploiting consumer vulnerability</li><li>Tied selling (buy X to get Y)</li><li>Practices impairing informed choice</li></ul></div>
+    </div>
+    <div class="alert blue" style="margin-top:12px;"><span class="alert-icon">🏛️</span><div class="alert-text"><strong>Enforcement:</strong> Administered by FSRA. Can impose monetary penalties, require conduct corrections, mandate new policies. Findings can be published (reputational risk). Can also support class action remedies — but UDAP findings themselves do not create a direct civil cause of action.</div></div>
+  </div>
+
+</div><!-- end summary -->
+
+<!-- ═══════════════════ FLASHCARDS TAB ═══════════════════ -->
+<div id="tab-flashcards" class="tab-panel">
+  <div class="fc-controls">
+    <button class="fc-btn active" id="browseBtn" onclick="setFcMode('browse')">Browse All</button>
+    <button class="fc-btn" id="studyBtn" onclick="setFcMode('study')">Study Mode</button>
+    <button class="fc-btn" onclick="resetCards()">Reset</button>
+    <span class="fc-meta" id="fcMeta">20 cards · tap to flip</span>
+  </div>
+
+  <!-- Browse mode -->
+  <div id="browseMode">
+    <div class="fc-grid" id="fcGrid"></div>
+  </div>
+
+  <!-- Study mode -->
+  <div id="studyMode" style="display:none;">
+    <div class="study-wrap">
+      <div class="study-progress" id="studyProgress" style="text-align:center;margin-bottom:14px;"></div>
+      <div class="study-card" id="studyCard" onclick="flipStudy()">
+        <div class="study-label" id="studyLabel">QUESTION — TAP TO REVEAL</div>
+        <div class="study-text" id="studyText"></div>
+      </div>
+      <div class="study-nav">
+        <button class="snav-btn" id="prevBtn" onclick="studyNav(-1)">← Prev</button>
+        <button class="snav-btn" id="nextBtn" onclick="studyNav(1)">Next →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ CASE LAW TAB ═══════════════════ -->
+<div id="tab-caselaw" class="tab-panel">
+
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--teal)"></div><div><h2>The Coverage Trigger &amp; Why It Matters</h2></div></div>
+    <div class="alert blue"><span class="alert-icon">📖</span><div class="alert-text"><strong>The phrase:</strong> "Arising directly or indirectly from the ownership, use OR operation of an automobile" — triggers coverage under SABs, DCPD, and third party liability. Three SCC cases define exactly how broadly (or narrowly) courts interpret it.</div></div>
+  </div>
+
+  <!-- Amos -->
+  <div class="case-block">
+    <div class="case-hdr" style="background:var(--teal);color:#fff;">
+      <div class="case-hdr-num">01</div>
+      <div class="case-hdr-text">
+        <div class="case-name">Amos v. Insurance Corporation of British Columbia (SCC)</div>
+        <div class="case-sub">Coverage type: Statutory Accident Benefits (No-Fault) · Carjacking</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <div class="case-col">
+        <div class="case-col-title" style="color:var(--teal);">THE FACTS</div>
+        <ul>
+          <li>Amos was driving his van in California</li>
+          <li>Attacked by carjackers — shot while trying to drive away</li>
+          <li>Applied to ICBC for no-fault accident benefits</li>
+          <li>ICBC denied — lower courts agreed: van was merely the "location" of the shooting</li>
+          <li>SCC granted appeal</li>
+        </ul>
+      </div>
+      <div class="case-col">
+        <div class="case-col-title" style="color:var(--teal);">THE AMOS TWO-PART TEST (SCC)</div>
+        <ul>
+          <li><strong>Part 1 — Purpose Test:</strong> Did the accident involve the ordinary activities to which automobiles are put?</li>
+          <li><strong>Part 2 — Causal Link Test:</strong> Is there a meaningful nexus between the injury and ownership/use of the vehicle — more than merely incidental or fortuitous?</li>
+          <li>Does NOT require direct or proximate causation</li>
+          <li>Vehicle does not need to be the instrument of injury</li>
+          <li>Statute interpreted broadly in favour of SAB coverage</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-verdict" style="background:var(--green-light);color:var(--green);">
+      ✅ RESULT: Amos WON. Carjacking had real causal connection to vehicle use — attackers wanted the van. The van drew the attack. Shooting arose from use and ownership of the vehicle.
+    </div>
+  </div>
+
+  <!-- Witlingham -->
+  <div class="case-block" style="margin-top:16px;">
+    <div class="case-hdr" style="background:var(--orange);color:#fff;">
+      <div class="case-hdr-num">02</div>
+      <div class="case-hdr-text">
+        <div class="case-name">Witlingham v. Insurer (SCC) — decided with Herbison</div>
+        <div class="case-sub">Coverage type: Underinsured Motorist (OPCF 44R — Family Protection) · Boulder dropped from overpass</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <div class="case-col">
+        <div class="case-col-title" style="color:var(--orange);">THE FACTS</div>
+        <ul>
+          <li>Witlinghams driving on I-95, North Carolina</li>
+          <li>Wrongdoers (Farmer &amp; Raynor) transported a boulder by vehicle to an overpass</li>
+          <li>Dropped the boulder onto the Witlinghams' car — catastrophic injuries</li>
+          <li>Wrongdoers fled in the same vehicle</li>
+          <li>Wrongdoers had only $25K USD in coverage — far below damages</li>
+          <li>Witlinghams claimed under their own OPCF 44R (Underinsured Motorist)</li>
+          <li>Court of Appeal found coverage — SCC reversed</li>
+        </ul>
+      </div>
+      <div class="case-col">
+        <div class="case-col-title" style="color:var(--orange);">SCC RULING — 3 CORE PRINCIPLES</div>
+        <ul>
+          <li><strong>Amos does NOT auto-extend to 3rd party liability coverage</strong> — different standard applies</li>
+          <li><strong>Must be fault as a motorist:</strong> tortious conduct must be tied to using the vehicle AS a vehicle — not some other purpose</li>
+          <li><strong>Intervening act:</strong> Dropping the boulder was separate from driving — fully severable from vehicle use</li>
+          <li>Transporting rocks ≠ continuation of vehicle use for the dropping</li>
+          <li>"But for" causation is NOT enough — need unbroken chain of causation</li>
+          <li>Vehicle's role cannot be merely incidental</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-verdict" style="background:var(--red-light);color:var(--red);">
+      ❌ RESULT: Coverage DENIED. The act of dropping the boulder was an intervening act severable from vehicle use. The causal chain was broken.
+    </div>
+  </div>
+
+  <!-- Herbison -->
+  <div class="case-block" style="margin-top:16px;">
+    <div class="case-hdr" style="background:var(--navy);color:#fff;">
+      <div class="case-hdr-num">03</div>
+      <div class="case-hdr-text">
+        <div class="case-name">Herbison v. Lumbermens Mutual (SCC) — decided with Witlingham</div>
+        <div class="case-sub">Coverage type: Third Party Liability (s.239 Insurance Act) · Hunting accident</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <div class="case-col">
+        <div class="case-col-title" style="color:var(--gold);">THE FACTS</div>
+        <ul>
+          <li>Wolf was being driven to a hunting site by his wife</li>
+          <li>Thought he saw a deer — told wife to stop the vehicle</li>
+          <li>Exited the vehicle, took aim, fired — it was Herbison, not a deer</li>
+          <li>Wolf found negligent — Herbison awarded $832,000+ in damages</li>
+          <li>Herbison argued Wolf's auto insurer should cover under s.239</li>
+          <li>Court of Appeal agreed — SCC reversed</li>
+        </ul>
+      </div>
+      <div class="case-col">
+        <div class="case-col-title" style="color:var(--gold);">SCC RULING</div>
+        <ul>
+          <li>"Directly or indirectly" relaxes the causation requirement — but does NOT eliminate the need for an unbroken chain</li>
+          <li>Wolf's truck merely created the <em>opportunity in time and space</em> for the accident</li>
+          <li>Exiting the vehicle and shooting was an <strong>independent intervening act</strong></li>
+          <li>That independent act broke the chain between vehicle use and the injury</li>
+          <li>Driving to a location does NOT make every subsequent act covered by auto insurance</li>
+          <li>"But for" causation alone is insufficient</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-verdict" style="background:var(--red-light);color:var(--red);">
+      ❌ RESULT: Coverage DENIED. The shooting was an independent act that broke the causal chain. The truck created the opportunity — it did not cause the injury.
+    </div>
+  </div>
+
+  <!-- Comparison table -->
+  <div class="section-block" style="margin-top:24px;">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--gold)"></div><div><h2>Case Law Comparison — Causation Spectrum</h2></div></div>
+    <div style="overflow-x:auto;">
+      <table class="formula-table">
+        <tr><th>Case</th><th>Coverage Type</th><th>Causal Standard</th><th>Result</th></tr>
+        <tr><td>Amos</td><td>SABs (no-fault)</td><td>Lowest — meaningful nexus, not proximate causation</td><td style="color:var(--green);font-weight:700;">WON ✅</td></tr>
+        <tr><td>Witlingham</td><td>Underinsured Motorist / Liability</td><td>Higher — unbroken chain of causation required</td><td style="color:var(--red);font-weight:700;">DENIED ❌</td></tr>
+        <tr><td>Herbison</td><td>Third Party Liability (s.239)</td><td>Higher — unbroken chain of causation required</td><td style="color:var(--red);font-weight:700;">DENIED ❌</td></tr>
+      </table>
+    </div>
+    <div class="alert gold" style="margin-top:12px;"><span class="alert-icon">🔑</span><div class="alert-text"><strong>The key takeaway:</strong> Amos is still good law — Witlingham and Herbison did not overturn it. They corrected the over-extension of Amos by lower courts. The Amos test (purpose + causal link) applies to SABs with a low causal threshold. For liability coverage, a stronger unbroken chain is required. Driving to a location does NOT make every subsequent act covered.</div></div>
+    <div class="alert blue" style="margin-top:8px;"><span class="alert-icon">🍕</span><div class="alert-text"><strong>Professor's poisoned pizza analogy:</strong> If you use a vehicle to deliver a poisoned pizza across town, your automobile insurer does not cover the poisoning. The vehicle got the pizza there — but the independent criminal act of poisoning breaks the causal chain. The policies have limits.</div></div>
+  </div>
+
+</div><!-- end caselaw -->
+
+<!-- ═══════════════════ BRIEF TAB ═══════════════════ -->
+<div id="tab-brief" class="tab-panel">
+  <div style="background:var(--white);border-radius:12px;padding:32px;box-shadow:var(--shadow);max-width:820px;">
+    <div style="border-bottom:2px solid var(--gold);padding-bottom:16px;margin-bottom:24px;">
+      <div style="font-size:10px;letter-spacing:5px;color:var(--gold);font-weight:700;margin-bottom:4px;">STUDENT BRIEF</div>
+      <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);font-weight:700;">Automobile Insurance in Ontario &amp; UDAP</div>
+      <div style="font-size:12px;color:var(--mid);margin-top:4px;">Source: Lecture — Insurance Act · OAP 1 · O.Reg 34/10 · s.267.5 · s.239 · FSRA Rule 2021-001</div>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-hdr">GOVERNING LAW</div>
+      <div class="brief-grid">
+        <div class="brief-key">Primary statute</div><div class="brief-val">Insurance Act (Ontario)</div>
+        <div class="brief-key">Standard form contract</div><div class="brief-val">Ontario Automobile Policy (OAP 1) — mandatory, set by legislation</div>
+        <div class="brief-key">Minor Injury</div><div class="brief-val">O. Reg 34/10, s.3(1) — Minor Injury Guideline</div>
+        <div class="brief-key">Pain &amp; Suffering gate</div><div class="brief-val">s.267.5 Insurance Act — threshold for non-pecuniary tort damages</div>
+        <div class="brief-key">TPL trigger</div><div class="brief-val">s.239 Insurance Act — "arising directly or indirectly from ownership, use or operation"</div>
+        <div class="brief-key">Consumer protection</div><div class="brief-val">FSRA Rule 2021-001 — Unfair Deceptive Acts or Practices (UDAP)</div>
+        <div class="brief-key">Regulator</div><div class="brief-val">Financial Services Regulatory Authority of Ontario (FSRA)</div>
+      </div>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-hdr">SYSTEM STRUCTURE — 4 MANDATORY COVERAGES UNDER OAP 1</div>
+      <div class="brief-grid">
+        <div class="brief-key">1. SABs</div><div class="brief-val">No-fault statutory accident benefits — own insurer pays first, fault irrelevant</div>
+        <div class="brief-key">2. DCPD</div><div class="brief-val">Direct Compensation Property Damage — own insurer pays vehicle damage when not at fault (opt-out available Jan 1, 2024)</div>
+        <div class="brief-key">3. Third Party Liability</div><div class="brief-val">Minimum $200K — fault-based tort claims for economic + non-economic damages</div>
+        <div class="brief-key">4. Uninsured Automobile</div><div class="brief-val">Covers injury/damage when at-fault driver has no insurance or is unidentified (hit-and-run)</div>
+      </div>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-hdr">STATUTORY ACCIDENT BENEFITS (SABs)</div>
+      <div class="brief-grid">
+        <div class="brief-key">Trigger</div><div class="brief-val">Injury from use or operation of a motor vehicle · driver, passenger, pedestrian, cyclist</div>
+        <div class="brief-key">Core rule</div><div class="brief-val">Own insurer pays first — fault is completely irrelevant</div>
+        <div class="brief-key">Priority order</div><div class="brief-val">Own insurer → Spouse's insurer → Vehicle insurer → MVACF</div>
+        <div class="brief-key">Benefits</div><div class="brief-val">Medical/Rehab/Attendant Care · IRBs (70% gross, capped) · Non-Earner · Caregiver · Death &amp; Funeral</div>
+        <div class="brief-key">MIG (O.Reg 34/10)</div><div class="brief-val">Caps SAB treatment for: sprains, strains, whiplash, contusions, abrasions, lacerations, sub-luxations</div>
+        <div class="brief-key">MIG exit conditions</div><div class="brief-val">Permanent spinal impairment · loss of limb function · chronic disabling pain</div>
+        <div class="brief-key">Injury levels</div><div class="brief-val">Minor (MIG caps) → Non-Catastrophic (higher limits) → Catastrophic (highest limits + lifetime care)</div>
+        <div class="brief-key">Critical distinction</div><div class="brief-val">MIG governs SABs ONLY — does NOT apply to tort claims. MIG ≠ s.267.5</div>
+      </div>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-hdr">THIRD PARTY LIABILITY &amp; s.267.5 THRESHOLD</div>
+      <div class="brief-grid">
+        <div class="brief-key">Fault required</div><div class="brief-val">Yes — must prove negligence of at-fault driver</div>
+        <div class="brief-key">Economic damages</div><div class="brief-val">Always available if losses exceed SAB caps — no threshold needed</div>
+        <div class="brief-key">s.267.5 threshold</div><div class="brief-val">Must prove ONE: Death | Permanent serious disfigurement | Permanent serious impairment of important function</div>
+        <div class="brief-key">"Important function"</div><div class="brief-val">Walking · cognition · limb use · psychological function</div>
+        <div class="brief-key">Contributory negligence</div><div class="brief-val">Damages reduced proportionally to plaintiff's fault</div>
+        <div class="brief-key">Statutory deductible</div><div class="brief-val">$47,913.01 deducted from every pain &amp; suffering award — even winning ones</div>
+        <div class="brief-key">Court standard</div><div class="brief-val">Expert medical evidence mandatory · subjective complaints insufficient · legal classification, not how pain "feels"</div>
+      </div>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-hdr">CASE LAW — COVERAGE TRIGGER (3 SCC CASES)</div>
+      <div class="brief-grid">
+        <div class="brief-key">Phrase at issue</div><div class="brief-val">"Arising directly or indirectly from the ownership, use OR operation of an automobile"</div>
+        <div class="brief-key">Amos v. ICBC</div><div class="brief-val">Two-part test: (1) Purpose test — ordinary vehicle activity? (2) Causal link — meaningful nexus? For SABs: low threshold, broad interpretation. Carjacking covered.</div>
+        <div class="brief-key">Witlingham (SCC)</div><div class="brief-val">Liability coverage: Amos does not auto-extend. Tortious act (dropping boulder) = intervening act severable from vehicle use. Unbroken causal chain required. Coverage denied.</div>
+        <div class="brief-key">Herbison (SCC)</div><div class="brief-val">Liability coverage (s.239): Driving to location ≠ makes every subsequent act covered. Shooting = independent intervening act. Truck created opportunity, didn't cause injury. Coverage denied.</div>
+        <div class="brief-key">Causation spectrum</div><div class="brief-val">LOWEST for SABs → HIGHER for third party liability. Amos still good law — Witlingham/Herbison corrected its over-extension.</div>
+      </div>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-hdr">UDAP — UNFAIR &amp; DECEPTIVE PRACTICES</div>
+      <div class="brief-grid">
+        <div class="brief-key">Governed by</div><div class="brief-val">FSRA Rule 2021-001 · administered by FSRA</div>
+        <div class="brief-key">Deceptive</div><div class="brief-val">Misleading to consumer — intent irrelevant · technically true statements can still be deceptive · test: reasonable consumer misled?</div>
+        <div class="brief-key">Unfair</div><div class="brief-val">Inequitable outcomes — no deception required · a fully disclosed practice can still be unfair</div>
+        <div class="brief-key">4 categories</div><div class="brief-val">Misleading representations · Material omissions · Unfair claims practices · Unfair sales &amp; distribution</div>
+        <div class="brief-key">Standard</div><div class="brief-val">Effects-based, not intent-based · applies entire insurance life cycle · Acts AND omissions covered</div>
+        <div class="brief-key">Enforcement</div><div class="brief-val">FSRA: monetary penalties · conduct corrections · published decisions · can support class action (not direct civil cause of action)</div>
+      </div>
+    </div>
+
+    <div class="brief-section">
+      <div class="brief-hdr">KEY DISTINCTIONS TO KNOW</div>
+      <div class="brief-grid">
+        <div class="brief-key">MIG vs s.267.5</div><div class="brief-val">MIG governs SAB entitlement ONLY. s.267.5 governs tort pain &amp; suffering claims. Similar in concept, legally distinct.</div>
+        <div class="brief-key">Fault for SABs</div><div class="brief-val">Irrelevant — you receive SABs even if you caused the accident</div>
+        <div class="brief-key">Fault for tort</div><div class="brief-val">Essential — must prove negligence to recover in tort</div>
+        <div class="brief-key">Fault for premiums</div><div class="brief-val">Relevant — at-fault determinations increase your future premiums</div>
+        <div class="brief-key">Economic damages</div><div class="brief-val">Always available in tort beyond SAB caps — s.267.5 threshold does NOT gate economic claims</div>
+        <div class="brief-key">Amos vs Witlingham/Herbison</div><div class="brief-val">Amos (SABs) = low causal bar. Witlingham/Herbison (liability) = higher bar, unbroken chain required</div>
+      </div>
+    </div>
+  </div>
+</div><!-- end brief -->
+
+<!-- ═══════════════════ EXAM GUIDE TAB ═══════════════════ -->
+<div id="tab-exam" class="tab-panel">
+
+  <div class="alert red" style="margin-bottom:20px;"><span class="alert-icon">⚠️</span><div class="alert-text"><strong>Professor's note:</strong> Most of this material is not exam-heavy in depth — but it does appear. UDAP is the lowest-weight section. Case law, MIG vs s.267.5, SAB priority rules, and the coverage trigger phrase are the higher-yield areas. Focus on conceptual distinctions over procedural detail.</div></div>
+
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--red)"></div><div><h2>HIGH PRIORITY — Know These Cold</h2></div></div>
+    <div class="exam-tip" style="border-color:var(--red);">
+      <div><div class="exam-tag" style="color:var(--red);border-color:var(--red);">HIGH</div></div>
+      <div class="exam-text">You ALWAYS claim SABs from your OWN insurer first — regardless of who caused the accident. Even as a pedestrian hit by another vehicle, you claim under your own auto policy. This trips students up constantly.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--red);">
+      <div><div class="exam-tag" style="color:var(--red);border-color:var(--red);">HIGH</div></div>
+      <div class="exam-text">MIG does NOT equal s.267.5. MIG governs SAB (no-fault) entitlement only. s.267.5 governs whether you can sue for non-pecuniary (pain &amp; suffering) tort damages. They are similar in concept but legally distinct and apply in completely different contexts.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--red);">
+      <div><div class="exam-tag" style="color:var(--red);border-color:var(--red);">HIGH</div></div>
+      <div class="exam-text">Fault matters in ONLY THREE ways: (1) Tort claims — fault must be proven to sue. (2) Premium increases — at-fault history raises your premiums. (3) DCPD — only applies when you are NOT at fault. Fault does NOT affect SAB eligibility at all.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--red);">
+      <div><div class="exam-tag" style="color:var(--red);border-color:var(--red);">HIGH</div></div>
+      <div class="exam-text">The Amos two-part test: (1) Purpose — was it an ordinary vehicle activity? (2) Causal link — meaningful nexus more than incidental? For SABs, this is interpreted broadly. For liability coverage (Witlingham, Herbison), a stronger unbroken causal chain is required. Amos is still good law.</div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--gold)"></div><div><h2>LIKELY TESTED — Understand Clearly</h2></div></div>
+    <div class="exam-tip" style="border-color:var(--gold);">
+      <div><div class="exam-tag" style="color:#9A6800;border-color:var(--gold);">LIKELY</div></div>
+      <div class="exam-text">Know the 3 MIG exit conditions cold: permanent spinal impairment / significant loss of limb function / chronic disabling pain. Exiting MIG unlocks higher SAB limits AND opens the door to non-economic tort claims.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--gold);">
+      <div><div class="exam-tag" style="color:#9A6800;border-color:var(--gold);">LIKELY</div></div>
+      <div class="exam-text">The s.267.5 threshold — must prove ONE of: Death | Permanent serious disfigurement | Permanent serious impairment of an important function (walking, cognition, limb use, psychological function). The test is a legal classification — not how the pain feels subjectively.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--gold);">
+      <div><div class="exam-tag" style="color:#9A6800;border-color:var(--gold);">LIKELY</div></div>
+      <div class="exam-text">Economic damages (lost income beyond SABs, out-of-pocket, future care costs) are ALWAYS available via tort — the s.267.5 threshold does NOT gate economic claims. Only non-pecuniary (pain &amp; suffering) damages require meeting the threshold.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--gold);">
+      <div><div class="exam-tag" style="color:#9A6800;border-color:var(--gold);">LIKELY</div></div>
+      <div class="exam-text">DCPD 4 conditions: Ontario accident + another Ontario-insured vehicle involved + you are not at fault. As of Jan 1, 2024, drivers can opt out. At-fault drivers get NO DCPD — they need optional collision/comprehensive coverage for their own vehicle damage.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--gold);">
+      <div><div class="exam-tag" style="color:#9A6800;border-color:var(--gold);">LIKELY</div></div>
+      <div class="exam-text">Witlingham and Herbison: both coverage denied because the tortious act was an INTERVENING ACT severable from vehicle use. The vehicle transported people/things to the scene — but the injury-causing act (dropping boulder / shooting) broke the causal chain. "But for" causation alone is not enough for liability coverage.</div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--blue)"></div><div><h2>WATCH OUT — Common Traps</h2></div></div>
+    <div class="exam-tip" style="border-color:var(--blue);">
+      <div><div class="exam-tag" style="color:var(--blue);border-color:var(--blue);">TRAP</div></div>
+      <div class="exam-text">IRBs are capped at 70% of gross income AND subject to weekly statutory caps. High earners are the most disadvantaged. You do NOT get full income replacement — the caps bite harder the more you earn.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--blue);">
+      <div><div class="exam-tag" style="color:var(--blue);border-color:var(--blue);">TRAP</div></div>
+      <div class="exam-text">Statutory deductible is $47,913.01. Even if you WIN a pain &amp; suffering case and get a $100K award, the deductible comes off first — you receive $52,086.99. The deductible is meant to discourage small-to-medium claims and encourage settlement.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--blue);">
+      <div><div class="exam-tag" style="color:var(--blue);border-color:var(--blue);">TRAP</div></div>
+      <div class="exam-text">Contributory negligence in Ontario tort = damages reduced proportionally to plaintiff's own fault. Ontario does NOT use all-or-nothing contributory negligence. Partial fault = partial recovery, not zero recovery.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--blue);">
+      <div><div class="exam-tag" style="color:var(--blue);border-color:var(--blue);">TRAP</div></div>
+      <div class="exam-text">Uninsured automobile coverage is the FOURTH mandatory bucket — students often only remember SABs, DCPD, and TPL. It covers hit-and-run and uninsured drivers by having your own insurer step in.</div>
+    </div>
+    <div class="exam-tip" style="border-color:var(--blue);">
+      <div><div class="exam-tag" style="color:var(--blue);border-color:var(--blue);">TRAP</div></div>
+      <div class="exam-text">UDAP: deception does NOT require intent — inadvertent deception counts. A technically true statement can still be deceptive if it creates a misleading overall impression. Unfairness does not require deception at all — a fully disclosed practice can still be unfair in its effects.</div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-hdr"><div class="section-hdr-bar" style="background:var(--navy)"></div><div><h2>Quick Formula Sheet</h2></div></div>
+    <div style="overflow-x:auto;">
+      <table class="formula-table">
+        <tr><th>Rule / Formula</th><th>Value or Criteria</th></tr>
+        <tr><td>SAB Priority Rule</td><td>Own insurer → Spouse's insurer → Vehicle insurer → MVACF</td></tr>
+        <tr><td>IRB Formula</td><td>70% of gross income, subject to weekly statutory caps</td></tr>
+        <tr><td>MIG Exit Conditions</td><td>Permanent spinal impairment | Loss of limb function | Chronic disabling pain</td></tr>
+        <tr><td>s.267.5 Threshold</td><td>Death | Permanent serious disfigurement | Permanent serious impairment of important function</td></tr>
+        <tr><td>DCPD Conditions (all 4)</td><td>Ontario accident + another Ontario-insured vehicle + not at fault under Fault Determination Rules</td></tr>
+        <tr><td>Statutory Deductible</td><td>$47,913.01 — deducted from every pain &amp; suffering award</td></tr>
+        <tr><td>Min TPL Coverage</td><td>$200,000 required (standard in practice: $1,000,000+)</td></tr>
+        <tr><td>Amos Test — Part 1</td><td>Purpose: was it an ordinary vehicle activity?</td></tr>
+        <tr><td>Amos Test — Part 2</td><td>Causal link: meaningful nexus more than incidental — does NOT require proximate causation (for SABs)</td></tr>
+        <tr><td>Liability Coverage Standard</td><td>Unbroken chain of causation required — higher bar than SABs (Witlingham, Herbison)</td></tr>
+        <tr><td>UDAP — Deceptive Test</td><td>Would a reasonable consumer be misled? Intent irrelevant.</td></tr>
+        <tr><td>UDAP — Unfair Test</td><td>Effects-based: inequitable outcome or consumer harm — no deception required</td></tr>
+      </table>
+    </div>
+  </div>
+
+</div><!-- end exam -->
+
+</div><!-- end main -->
+
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ── Tab navigation ────────────────────────────────────────────────────────────
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ── Scroll top button ─────────────────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 400);
+});
+
+// ── Flashcard data ────────────────────────────────────────────────────────────
+const CARDS = [
+  {q:"What type of auto insurance system does Ontario have?", a:"A hybrid system — blending no-fault SABs with tort-based liability. Ontario leans more toward no-fault (less extreme than Quebec). Governed by the Insurance Act and OAP 1."},
+  {q:"What is the core no-fault rule in Ontario?", a:"You claim SABs from YOUR OWN insurer first, regardless of fault. This applies even if you are a pedestrian hit by another vehicle — you still claim under your own policy."},
+  {q:"What are the 4 SAB priority rules (who pays first)?", a:"1. Your own insurer → 2. Spouse's insurer → 3. Insurer of the vehicle you were in → 4. Motor Vehicle Accident Claims Fund (MVACF) if no insurance available."},
+  {q:"Name the 5 types of SAB benefits.", a:"1. Medical/Rehab/Attendant Care → 2. Income Replacement Benefits (IRBs) — 70% gross, capped → 3. Non-Earner Benefits (students/unemployed) → 4. Caregiver Benefits → 5. Death & Funeral Benefits."},
+  {q:"What is OAP 1?", a:"The Ontario Automobile Policy — the mandatory standard-form auto insurance contract. Set by legislation and regulation. Insurers cannot change the basic package. Consists of application, certificate of insurance, and policy text."},
+  {q:"What is the Minor Injury Guideline (MIG) and what does it cover?", a:"O. Reg 34/10 — caps SAB treatment funding for soft tissue injuries: sprains, strains, whiplash, contusions, abrasions, lacerations, sub-luxations. Full recovery expected. Strict treatment caps apply."},
+  {q:"What are the 3 ways to EXIT the MIG?", a:"1. Permanent spinal impairment → 2. Significant loss of limb function → 3. Chronic disabling pain. Exiting MIG unlocks higher SAB limits and access to non-economic tort damages."},
+  {q:"MIG vs s.267.5 — what is the critical distinction?", a:"MIG governs SAB (no-fault) benefit entitlement ONLY — it does NOT apply to tort claims. s.267.5 governs whether you can sue for non-pecuniary (pain & suffering) damages in tort. Similar concepts, legally distinct."},
+  {q:"What is DCPD and what are its 4 conditions?", a:"Direct Compensation – Property Damage. Your insurer pays vehicle damage when you're NOT at fault. All 4: (1) Ontario accident (2) Another vehicle involved (3) Other vehicle Ontario-insured (4) You are not at fault per Fault Determination Rules."},
+  {q:"What is the 4th mandatory coverage under OAP 1?", a:"Uninsured Automobile Coverage. Covers injury or damage when the at-fault driver has no insurance, or in hit-and-run situations where the driver cannot be identified. Your own insurer steps in."},
+  {q:"What is the s.267.5 threshold test?", a:"To sue for non-pecuniary (pain & suffering) damages, plaintiff must prove ONE of: (1) Death, (2) Permanent serious disfigurement, OR (3) Permanent serious impairment of an important physical, mental, or psychological function."},
+  {q:"What is the current statutory deductible for pain & suffering awards?", a:"$47,913.01. Deducted from every pain & suffering award even if you win. Example: $100K award → you receive $52,086.99. Purpose: discourage small claims, control premiums, encourage settlements."},
+  {q:"Can you always sue for economic damages in tort?", a:"YES. s.267.5 only gates non-pecuniary (pain & suffering) claims. Economic damages — lost income beyond SAB caps, out-of-pocket expenses, future care costs — are always available if losses exceed SAB limits. No threshold needed."},
+  {q:"What is the Amos two-part test and why does it matter?", a:"Part 1 — Purpose test: Was it an ordinary vehicle activity? Part 2 — Causal link: Is there a meaningful nexus more than incidental? For SABs: interpreted broadly, no proximate causation required. Vehicle need not be the instrument of injury."},
+  {q:"What happened in Amos v. ICBC and what was the result?", a:"Amos was carjacked and shot while driving his van. SCC held: carjacking had real causal connection to vehicle use — attackers wanted the van. Amos won SAB coverage. The van was NOT merely the location of a random shooting."},
+  {q:"What happened in Witlingham and what was the SCC's ruling?", a:"Wrongdoers transported a boulder by vehicle to an overpass and dropped it on the Witlinghams' car. SCC denied coverage. For liability coverage, the tortious act (dropping the boulder) was an intervening act severable from vehicle use. Unbroken causal chain required — 'but for' causation insufficient."},
+  {q:"What happened in Herbison and what was the SCC's ruling?", a:"Wolf was driven to a hunting site, exited the vehicle, and shot Herbison thinking he was a deer. SCC denied auto insurance coverage. The shooting was an independent intervening act. Driving to the location did not make every subsequent act covered. The truck created opportunity — it didn't cause the injury."},
+  {q:"How does the causation standard differ between SABs and liability coverage?", a:"LOWEST for SABs — meaningful nexus, not proximate causation (Amos). HIGHER for third party liability — unbroken chain of causation required, 'but for' causation insufficient (Witlingham, Herbison). Amos is still good law — the later cases corrected its over-extension."},
+  {q:"What is UDAP and what is the key distinction between deceptive and unfair?", a:"UDAP = Unfair Deceptive Acts or Practices. Governed by FSRA Rule 2021-001. Deceptive = misleading to consumer (intent irrelevant, technically true statements can qualify, test: reasonable consumer misled?). Unfair = inequitable outcomes (no deception required, a fully disclosed practice can still be unfair)."},
+  {q:"What are the 4 prohibited categories under the UDAP rule?", a:"1. Misleading representations (total impression governs, not isolated wording) → 2. Material omissions (failing to disclose key limitations) → 3. Unfair claims practices (delays, poor investigation) → 4. Unfair sales & distribution (high-pressure tactics, tied selling, exploiting vulnerability)."},
+];
+
+let fcFlipped = {};
+let studyIndex = 0;
+let studyFlipped = false;
+let fcMode = 'browse';
+
+function buildBrowseCards() {
+  const grid = document.getElementById('fcGrid');
+  grid.innerHTML = '';
+  CARDS.forEach((c,i) => {
+    const div = document.createElement('div');
+    div.className = 'fc-card' + (fcFlipped[i] ? ' flipped' : '');
+    div.innerHTML = `<div class="fc-label">${fcFlipped[i] ? 'ANSWER' : 'Q ' + (i+1)}</div>
+      <div class="fc-text">${fcFlipped[i] ? c.a : c.q}</div>
+      <div class="fc-hint">${fcFlipped[i] ? 'tap to see question' : 'tap to reveal answer'}</div>`;
+    div.onclick = () => { fcFlipped[i] = !fcFlipped[i]; buildBrowseCards(); };
+    grid.appendChild(div);
+  });
+}
+
+function buildStudyCard() {
+  const c = CARDS[studyIndex];
+  document.getElementById('studyProgress').textContent = `Card ${studyIndex+1} of ${CARDS.length}`;
+  const card = document.getElementById('studyCard');
+  card.classList.toggle('flipped', studyFlipped);
+  document.getElementById('studyLabel').textContent = studyFlipped ? 'ANSWER' : 'QUESTION — TAP TO REVEAL';
+  document.getElementById('studyText').textContent = studyFlipped ? c.a : c.q;
+  document.getElementById('prevBtn').disabled = studyIndex === 0;
+  document.getElementById('nextBtn').disabled = studyIndex === CARDS.length - 1;
+}
+
+function flipStudy() { studyFlipped = !studyFlipped; buildStudyCard(); }
+function studyNav(dir) { studyIndex += dir; studyFlipped = false; buildStudyCard(); }
+
+function setFcMode(mode) {
+  fcMode = mode;
+  document.getElementById('browseMode').style.display = mode === 'browse' ? 'block' : 'none';
+  document.getElementById('studyMode').style.display = mode === 'study' ? 'block' : 'none';
+  document.getElementById('browseBtn').classList.toggle('active', mode === 'browse');
+  document.getElementById('studyBtn').classList.toggle('active', mode === 'study');
+  if (mode === 'study') { studyIndex = 0; studyFlipped = false; buildStudyCard(); }
+  document.getElementById('fcMeta').textContent = mode === 'browse' ? `${CARDS.length} cards · tap to flip` : 'One at a time';
+}
+
+function resetCards() { fcFlipped = {}; studyIndex = 0; studyFlipped = false; if(fcMode==='browse') buildBrowseCards(); else buildStudyCard(); }
+
+// Init
+buildBrowseCards();
+buildStudyCard();
+</script>
+</body>
+</html>
